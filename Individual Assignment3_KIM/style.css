@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+  }
+body 
+{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    /* gold color */
+    background: #fff6e9;
+    color: #2d1812;
+}
+
+/* Portfolio nav (back to main) */
+#portfolio-nav {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+#portfolio-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#portfolio-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+#portfolio-nav a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+#portfolio-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header with logo and bold name */
+.header 
+{
+    display: flex;
+    align-items: center;
+    background: #db742e; 
+    color: #fff;
+    padding: 1em 2em;
+    gap: 1em;
+    border-bottom: 5px solid #f4c766; 
+}
+
+.logo 
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+h1 
+{
+    font-family: serif;
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin: 0;
+}
+
+/* gallery presentation for chicken menu items */
+.gallery 
+{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 2em auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.menu-item 
+{
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.09);
+    overflow: hidden;
+    max-width: 320px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    flex: 1 1 300px;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.menu-item img 
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item .desc 
+{
+    padding: 1em;
+    font-size: 1.05em;
+    color: #db742e; 
+}
+
+.menu-item:active,
+.menu-item:focus 
+{
+    transform: scale(1.04);
+    outline: 2px solid #f3c762;
+}
+
+/* Footer details (shown unless using phone to view) */
+.footer 
+{
+    background: #a84d0d;
+    color: #fff;
+    padding: 1.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05em;
+    flex-wrap: wrap;
+}
+
+.footer > div 
+{
+    margin: 0.5em 1em;
+}
+
+/* SMALL SCREEN - directions/map for mobile only, initially hidden */
+.directions {
+    display: none;
+    text-align: center;
+    margin: 3em 1em 1em 1em;
+}
+
+.directions h2 {
+    color: #db742e;
+    margin-bottom: 0.5em;
+}
+
+.map-img {
+    margin-top: 1em;
+    width: 260px;
+    max-width: 80vw;
+    border: 3px solid #db742e;
+    border-radius: 10px;
+}
+
+/* For tablet and medium layout - vertical, card style menu */
+@media (max-width: 950px) 
+{ 
+    .gallery 
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        max-width: 98vw;
+    }
+
+    .menu-item 
+    {
+        display: flex;
+        align-items: center;
+        max-width: 95vw;
+        min-height: 120px;
+        padding-bottom: 0;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    .menu-item img 
+    {
+        width: 120px;
+        height: 100px;
+        margin: 0 1em 0 0;
+        flex-shrink: 0;
+    }
+
+    .menu-item .desc 
+    {
+        padding: 0.5em 0;
+    }
+    .footer-address,
+    .footer-location 
+    {
+        display: none;
+    }
+
+    .footer 
+    {
+        justify-content: center;
+    }
+}
+
+/* Phone: show only directions/map, hide menu/footer */
+@media (max-width: 600px) 
+{ 
+    .header 
+    {
+        flex-direction: column;
+        padding: 1em;
+        text-align: center;
+    }
+
+    h1 
+    {
+        font-size: 1.4em;
+    }
+    .gallery,
+    .footer 
+    {
+        display: none;
+    }
+
+    .directions 
+    {
+        display: block;
+    }
+}
+@media (max-width: 370px) 
+{
+    h1 { font-size: 1.1em; }
+    .directions { font-size: .95em; }
+}

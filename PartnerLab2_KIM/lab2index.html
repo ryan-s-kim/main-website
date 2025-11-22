@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partner Lab 2</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lab2style.css">
+    <script src="lab2programs.js"></script>
+</head>
+<body>
+
+    <!-- Portfolio navigation bar -->
+    <nav id="portfolio-nav">
+        <ul>
+            <li><a href="../index.html">Back to Main Portfolio</a></li>
+            <li><a href="../index.html#portfolio">All Assignments</a></li>
+        </ul>
+    </nav>
+
+    <!-- Step 1: Generic greeting - like a banner -->
+    <h1 id="usergreeting">Hello User!</h1> 
+    <p id="message">Welcome to the website. Customize it how you please.</p>
+    <hr>
+
+    <!--Step 2 - Enter name and custom message-->
+    <label for="userName">Enter your name:</label>
+    <input type="text" id="userName">
+    <br><br>
+
+    <label for="userMessage">Enter your message:</label>
+    <input type="text" id="userMessage">
+    <br><br>
+    
+    <label for="backgColor">Choose your background color:</label>
+    <select id="backgColor">
+        <option value="green">Green</option>
+        <option value="lavender">Light purple</option>
+        <option value="lightblue">Light blue</option>
+        <option value="orange">Orange</option>
+    </select>
+    <br><br>
+    <button onclick="customizePage();">Submit</button> <!--Puts these changes into effect-->
+    <hr>
+
+    <!-- Extra Credit: To Do List-->
+    <h2>To Do List</h2>
+    <input type="text" id="todoThings">
+    <button onclick="addTodoThings();">Add To Do</button> <!--press to add items-->
+    <ol id="todoList"></ol> <!--ordered list of to do tasks-->
+
+</body>
+</html>

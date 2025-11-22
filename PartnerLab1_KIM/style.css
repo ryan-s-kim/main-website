@@ -1,0 +1,186 @@
+/* Portfolio nav (back to main) */
+#portfolio-nav {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 0.5em 0;
+}
+#portfolio-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#portfolio-nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+#portfolio-nav a {
+  color: #8cd4b2;
+  font-weight: bold;
+  text-decoration: none;
+}
+#portfolio-nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- The rest of your existing CSS stays as before --- */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #232823; /* subdued olive-green undertone */
+}
+.header {
+  background: #2a3438;
+  color: #e2e6df;
+  padding: 20px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #384138;
+}
+.header nav a {
+  color: #b7c1b3;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 700;
+  transition: color 0.2s;
+  letter-spacing: 0.5px;
+}
+.header nav a:hover {
+  color: #c5edb5;
+}
+.intro-section, .menu-list, .about-section {
+  padding: 24px;
+  max-width: 780px;
+  margin: 0 auto;
+  color: #e4eada;
+}
+.highlight {
+  color: #8cd4b2;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.floating-box {
+  float: right;
+  width: 245px;
+  margin: 15px 0 15px 32px;
+  background: #222b22;
+  border: 2px solid #4d6a54;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 8px #212821cc;
+  text-align: center;
+}
+.floating-box img {
+  width: 93%;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  border: 1.5px solid #677667;
+}
+.float-text {
+  display: block;
+  font-size: 1.07em;
+  color: #b1c4b4;
+}
+/* Inline images for sections */
+.role-image, .ethics-image {
+  display: block;
+  margin: 20px auto 18px auto;
+  max-width: 95%;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px #19201b;
+  border: 2px solid #464f3b;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  background: #34403b;
+  margin: 8px 0;
+  padding: 7px 18px;
+  border-radius: 7px;
+  color: #d4edd2;
+}
+.detail {
+  color: #8fa099;
+  font-weight: 500;
+}
+.smallprint {
+  font-size: 0.85em;
+  color: #858d81;
+  letter-spacing: 0.7px;
+}
+.page-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  background: none;
+  padding: 8px 24px;
+  pointer-events: none;
+  z-index: 99;
+}
+.page-footer .smallprint {
+  color: #858d81;
+  font-size: 0.95em;
+  letter-spacing: 0.7px;
+}
+.core-values {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 24px 0;
+}
+.value-card {
+  background: #253027;
+  border-radius: 10px;
+  padding: 13px;
+  width: 32%;
+  text-align: center;
+  color: #c7debe;
+  box-shadow: 0 1px 4px #38413f;
+  border: 1.5px solid #515b4f;
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+.hover-card:hover {
+  transform: scale(1.06);
+  background: #2c3d31;
+  box-shadow: 0 3px 20px #1e2217cc;
+  border-color: #7bb78b;
+  color: #eaf6e9;
+}
+.contact {
+  color: #d0eabb;
+  font-weight: bold;
+  background: #313f33;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 1.01em;
+  letter-spacing: 0.8px;
+  border: 1.5px solid #648a42;
+}
+h2 {
+  color: #8bb18d;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 11px;
+  letter-spacing: 1px;
+}
+h3 {
+  color: #acc39f;
+  letter-spacing: 1px;
+}
+@media (max-width: 800px) {
+  .floating-box {
+    float: none;
+    margin: 22px auto;
+    display: block;
+    width: 90%;
+  }
+  .core-values {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .value-card {
+    width: 100%;
+  }
+}

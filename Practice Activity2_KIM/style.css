@@ -1,0 +1,183 @@
+#portfolio-nav {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 0.5em 0;
+  width: 100vw;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  margin: 0;
+  box-shadow: 0 2px 12px #1115;
+}
+#portfolio-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#portfolio-nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+#portfolio-nav a {
+  color: #FFD700;
+  font-weight: bold;
+  text-decoration: none;
+}
+#portfolio-nav a:hover {
+  text-decoration: underline;
+}
+
+body 
+{
+  background: #3e402f; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 48px; /* Keeps grid content visible under the fixed nav */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* grid layout*/
+.grid
+{
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  gap: 16px;
+  width: 760px;
+  height: 610px;
+  padding: 16px;
+  background: #23261f;
+  border-radius: 18px;
+  box-shadow: 0 0 12px 2px #292d22;
+}
+
+.header 
+{
+  grid-area: header;
+  background: linear-gradient(90deg, #686e4e 60%, #43482e 100%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: start;
+  color: #e2e5c1;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 1.42em;
+  letter-spacing: 1px;
+  padding-left: 24px;
+}
+
+/* Fighter jet image template */
+.jet-img 
+{
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #23261f;
+  filter: grayscale(0.3) contrast(1.1);
+  box-shadow: 0 2px 6px #23261f55;
+}
+
+/* Sidebar colors and filter effects */
+.sidebar 
+{
+  grid-area: sidebar;
+  background: linear-gradient(135deg, #575c45, #92987b 90%);
+  color: #e2e5c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+  flex-direction: column;
+  filter: brightness(0.92) blur(1.2px);
+  transition: filter 0.4s;
+  text-align: center;
+  padding: 0 6px;
+}
+.sidebar:hover 
+{
+  filter: brightness(1.17) blur(0.1px);
+}
+
+/* content 1 - transform and animation  */
+.content1 
+{
+  grid-area: content1;
+  background: linear-gradient(100deg, #42585c 60%, #75878b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e2e5c1;
+  font-weight: bold;
+  border-radius: 6px;
+  transform: rotate(-1.5deg) scale(1.025);
+  transition: transform 0.3s;
+  animation: popIn 1.2s linear;
+  text-align: center;
+}
+.content1:hover {
+  transform: scale(1.07) rotate(1deg);
+}
+
+/* Other content areas  */
+.content2 
+{
+  grid-area: content2;
+  background: linear-gradient(120deg, #5d5d53,#b49465 93%);
+  color: #e2e5c1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+.content3 
+{
+  grid-area: content3;
+  background: linear-gradient(120deg, #274137 70%, #909286 98%);
+  color: #e2e5c1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Footer in tan */
+.footer 
+{
+  grid-area: footer;
+  background: linear-gradient(90deg, #847744 60%, #474326 99%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f0d7;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* animation  */
+@keyframes popIn 
+{
+  0% { opacity: 0; transform: scale(0.85) skewY(2deg);}
+  70% { opacity: 1; transform: scale(1.04) skewY(-2deg);}
+  100% { opacity: 1; transform: scale(1.025) skewY(0);}
+}

@@ -1,0 +1,57 @@
+/* Portfolio nav (back to main) */
+#portfolio-nav {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+#portfolio-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#portfolio-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+#portfolio-nav a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+#portfolio-nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: white;
+    font-family: Arial;
+    margin: 30px;
+}
+
+/* Text color for "Hello User!"*/
+h1 {
+    color: blue;
+}
+
+/* color for the "To Do List" header*/
+h2 {
+  color: purple;
+}
+
+label {
+    font-weight: bold;
+}
+
+#todoList {
+    margin-top: 10px;
+}
+
+/* changing color for the list items*/
+#todoList li {
+  color: purple;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+}
